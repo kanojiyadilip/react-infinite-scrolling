@@ -12,7 +12,6 @@ function Login() {
         let userN = localStorage.getItem('userName');
         if(userN){
             history.push("/home");
-            // setTimeout(()=>{window.location.href='/home'},0)
         }
         console.log("userN=>",userN);
     },[])

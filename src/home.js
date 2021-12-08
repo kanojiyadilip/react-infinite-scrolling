@@ -15,7 +15,6 @@ function Home() {
     let userN = localStorage.getItem('userName');
     if(!userN){
         history.push("/");
-        // setTimeout(()=>{window.location.href='/login'},0)
     }
     console.log("userN=>",userN);
   },[])
@@ -50,14 +49,10 @@ function Home() {
       <div className={"list"}>
         {
           state.length > 0 && state.map((item, i)=>(
-            // if(item.id === undefined) {return}
-            // else{
             <div key={i} className={'main'}>
                 <img src={item.airline[0].logo} className={"uimg"} />
-              {/* <div>Id:  {item._id}</div> */}
                 <div><p>Name:  {item.name}</p></div>
             </div>
-            // }
           ))  
         }
 
